@@ -10,6 +10,7 @@ mongoose.set('strictQuery', false);
 const encrypt = require("mongoose-encryption");
 
 const app = express();
+const PORT = process.env.PORT || 3000
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -82,6 +83,6 @@ User.findOne({email: username}, function(err, foundUser){
 
 
 
-app.listen(3000, function(){
+app.listen(PORT, function(){
     console.log("server started on port 3000");
 });
