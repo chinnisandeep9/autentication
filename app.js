@@ -1,10 +1,11 @@
 //jshint esversion:6
 require("dotenv").config();
 const express = require("express");
+const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 
-const { default: mongoose } = require("mongoose");
+
 mongoose.set('strictQuery', false);
 const encrypt = require("mongoose-encryption");
 
