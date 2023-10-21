@@ -77,14 +77,6 @@ User.findOne({email: username}, function(err, foundUser){
 });
 
 
-
-
-
-
-
-
-connectDB().then(() => {
-    app.listen(PORT, () => {
-        console.log("listening for requests");
-    })
-})
+app.listen(PORT, function(){
+    console.log("server started on port 3000");
+});
